@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <!-- Charset -->
+  <meta charset="UTF-8">
+
+  <!-- Adaptation pour edge-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- Balises META -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="copyright" content="Yann Berlemont" />
+  <meta name="author" content="Yann Berlemont" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="keywords" content="maths, cercle trigonométrique, Yann Berlemont, EPTM, ALAALB" />
+
+  <!-- Feuille de style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--Script pour le graphique oscilloscope -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
+
+  <!-- Titre de la page -->
+  <title>Mathématiques - Projet Alternatif - Yann Berlemont</title>
+</head>
+
+<body>
+  <h1 class="center">Projet Alternatif ~ Yann Berlemont</h1>
+  <!-- Canvas pour dessiner l'animation -->
+  <div class="canvas-container">
+    <canvas id="canvas" width="700" height="390"></canvas>
+    <canvas id="graphique"></canvas>
+  </div>
+  <br>
+
+  <div class="container">
+    <!-- Boutons pour augmenter/diminuer le délai de l'animation -->
+    <div class="center">
+      <button onclick="diminuerDelai()">-</button>&nbsp;
+      <span id="affichageDelai"></span>&nbsp;
+      <button onclick="augmenterDelai()">+</button>&nbsp;
+    </div>
+
+    <br>
+
+    <!-- Boutons pour démarrer, arrêter et recommencer l'animation -->
+    <div class="center">
+      <button onclick="demarrerAnimation()">Démarrer</button> &nbsp;
+      <button onclick="arreterAnimation()">Arrêter</button> &nbsp;
+      <button id="recommencer" onclick="redemarrerAnimation()">Recommencer</button> &nbsp;
+      <button onclick="enregistrer()">Enregistrer les valeurs</button> &nbsp;
+      <button onclick="downloadcsv()">Télécharger le CSV</button> &nbsp;
+    </div>
+
+    <br>
+
+    <!-- Affichage de l'angle en degrés et en radians -->
+    <p>
+      <span id="affichageAngle"> </span> &nbsp;
+      <span id="affichageAngleRadian"> </span> &nbsp;
+      <span id="affichagesin"> </span> &nbsp;
+      <span id="affichagecos"> </span> &nbsp;
+      <span id="affichagetan"> </span> &nbsp;
+    </p>
+
+  </div>
+  <footer>
+    <!-- texte du fond et image eptm -->
+    <object data="eptm.svg" width="150" height="120"></object>
+    <span> &nbsp; Mathématiques ~ Projet Alternatif V1.3 ~ Berlemont Yann ~ MI-IN CG 2</span>
+  </footer>
+
+  <!-- Fichier JavaScript contenant le code pour l'animation -->
+  <script src="script.js"></script>
+</body>
+
+</html>
